@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="form-box">
+        <h3 style="padding: 10px; text-align: center; background-color: blueviolet; color: white;">Add new student</h3>
+        <form [formGroup]="batch" (ngSubmit)="save()">
+            <mat-form-field>
+                <mat-label>Course Name</mat-label>
+                <input matInput type="text" formControlName="courseName" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Discription</mat-label>
+                <input matInput type="text" formControlName="discription" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Starting Date</mat-label>
+                <input matInput type="date" formControlName="startingDate" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Duration</mat-label>
+                <input matInput type="text" formControlName="duration" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Time</mat-label>
+                <input matInput type="text" formControlName="time" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Location</mat-label>
+                <input matInput type="number" formControlName="location" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <!-- <mat-form-field>
+                <mat-label>Instructor</mat-label>
+                <input matInput type="num" formControlName="instructor" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field> -->
+
+            <button [disabled]="!batch.valid" type="submit"
+             mat-flat-button style="width: 100%; background-color:blue;
+             color:white " (click)="save()">submit</button>
+        </form>
+    </div>
+</div>
+
+

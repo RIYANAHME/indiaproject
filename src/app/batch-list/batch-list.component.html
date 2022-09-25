@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="desk-view">
+        <mat-grid-list cols="3" rowHeight="2:1" gutterSize="20px">
+            <mat-grid-tile *ngFor="let batch of batch"
+             style="font-size: 22px !important;" (click)="details(batch.batchName)">
+             <br>
+               <!-- {{batch.name}} <br> -->
+               <p>{{batch.me}} </p> , <br>
+                <!-- {{batch.me}} <br> -->
+                <p>{{batch.time}}</p> <br>
+                <!-- <p>{{batch.batchName}}</p> -->
+                <button mat-raised-button>Approve</button>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </div>
+
+    <div class="mob-view">
+        <div class="box" *ngFor="let batch of batch">
+            <h4 style="text-align: center; color:brown">{{batch.batchName}}</h4>
+            {{batch.me}} <br>
+            <p>{{batch.time}}</p> <br>
+            <!-- <p>{{batch.batchName}}</p> -->
+            <button mat-raised-button>Approve</button>
+        </div>
+    </div>
+</div>

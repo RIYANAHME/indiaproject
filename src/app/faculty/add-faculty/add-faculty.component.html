@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <div class="form-box">
+        <h3 style="padding: 10px; text-align: center;
+         background-color: blueviolet; color: white;">Add new Faculty</h3>
+        <form [formGroup]="faculty" (ngSubmit)="save()">
+            <mat-form-field>
+                <mat-label>Add-Student</mat-label>
+                <input matInput type="text" formControlName="name" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Date of birth</mat-label>
+                <input matInput type="date" formControlName="dob" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Gender</mat-label>
+                <input matInput type="text" formControlName="gender" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Qualification</mat-label>
+                <input matInput type="text" formControlName="qualification" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Phone</mat-label>
+                <input matInput type="number" formControlName="phone" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label> Full Address</mat-label>
+                <input matInput type="text" formControlName="add" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+
+
+
+
+            <mat-form-field>
+                <mat-label>Joining Date</mat-label>
+                <input matInput type="date" formControlName="joinDate" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+            <!-- <mat-form-field>
+                <mat-label>Salary</mat-label>
+                <input matInput type="number" formControlName="salary" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field> -->
+
+            <mat-form-field>
+                <mat-label>Subject</mat-label>
+                <input matInput type="text" formControlName="subject" required><br>
+                <mat-error>this is required</mat-error>
+            </mat-form-field>
+
+
+            <button [disabled]="!faculty.valid" type="submit" mat-flat-button style="width: 100%; background-color:blue; color:white " (click)="save()">submit</button>
+        </form>
+    </div>
+</div>
+
+

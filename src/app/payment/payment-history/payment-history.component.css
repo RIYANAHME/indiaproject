@@ -1,0 +1,22 @@
+table{
+    width: 100%;
+}
+
+.wrapper
+{
+    width: 100%;
+
+} 
+
+mat-form-field
+{
+    width: 100%;
+}
+
+.payment-header
+{
+    color: white;
+    background-color: linear-gradient(to right,royalblue,green);
+    padding: 10px;
+    text-align: center;
+}

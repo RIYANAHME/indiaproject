@@ -1,0 +1,76 @@
+.wrapper
+{
+    width: 100%;
+    margin-top: 10px;
+    
+} 
+mat-grid-tile
+{
+    background-color: rgb(223, 166, 91);
+}
+
+#first 
+{
+    background-color: antiquewhite;
+    color: white;
+}
+#second
+{
+    background-color: aqua;
+    color: white;
+}
+#third
+{
+    background-color: rgb(219, 117, 211);
+    color: white;
+}
+
+@media (max-width:700px)
+{
+    h3
+    {
+        font-size: 15px;
+    }
+    p 
+    {
+        font-size: 12px;
+    }
+}
+
+.table
+{
+    box-shadow: 5px 5px 10px;
+    font-size: 15px;
+}
+
+tr:hover
+{
+    cursor: pointer;
+    background-color: aliceblue;
+
+}
+.table-heading{
+    background-color: aqua;
+    color: white;
+     
+}
+
+
+/* piechart */
+
+#piChart
+{
+    background-color: aliceblue;
+}
+
+
+.pay-info
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: aquamarine;
+    color: white;
+    padding: 10px;
+}

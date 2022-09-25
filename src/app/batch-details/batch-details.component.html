@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10">
+                <h2 style=" padding: 10px;">{{batch.name | uppercase}}</h2>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Describtion {{batch.discription}}</p>
+                <p>Starting date: {{batch.duration}}</p>
+                <p>Duration date: {{batch.startingDate}}</p>
+
+            </div>
+            <div class="col-sm-6">
+                <p>Time {{batch.time}}</p>
+                <p>Instractor {{batch.instructor}}</p>
+                <p>Location {{batch.location}}</p>
+            </div>
+        </div> 
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h3 style="color:rgb(0, 0, 0); padding: 5px; text-align:center">Student list of batch</h3>
+    <input class="search-box" placeholder="search student by name" [(ngModel)]="searchItem" type="text">
+    <div class="container-fluid">
+        <table class="table">
+            <tr>
+                <th>s.No</th>
+                <th>Student Name</th>
+                <th>phone</th>
+                <th>view</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let student of student | studentFilter:searchItem; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.phone}}</td>
+                 <td><button class="btn btn-primary" (click)="viewMore(student._id)">view</button></td>
+                 <td><button class="btn btn-danger">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div> 

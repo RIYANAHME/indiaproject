@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <form [formGroup]="user" class="login-form">
+        <h4 class="login">Login</h4>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput type="text" name="username" formControlName="username" required>
+            <mat-error>Username is requird</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" formControlName="password" required>
+            <mat-error>Password is requird</mat-error>
+
+        </mat-form-field>
+        <button [disabled]="!user.valid" style="width: 100%;" mat-flat-button
+         color="primary" type="submit" (click)="login()">click me</button>
+    </form>
+</div>  

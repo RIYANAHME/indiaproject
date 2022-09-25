@@ -1,0 +1,102 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background-color: rgba(21, 18, 192, 0.808);
+     color:white">Menu</mat-toolbar>
+    <mat-nav-list>
+      <div class="logo">
+        <img class="logo-img" src="assets/my-logo.png" alt="logo">
+      </div>
+
+        <!-- <button routerLink="/Deshboard/home" mat-menu-item>
+          <mat-icon>Dashboard</mat-icon>
+          <span>Dashboard</span>
+        </button> -->
+
+    <!-- batch menu -->
+      <button mat-menu-item [matMenuTriggerFor]="menu"
+       aria-label="Example icon-button with a menu">
+        <mat-icon>menu_book</mat-icon>
+        <span>Course-Request</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button routerLink="/Deshboard/batch-list" mat-menu-item>
+          <mat-icon>menu</mat-icon>
+          <span>Course-list</span>
+        </button>
+
+        <button routerLink="/Deshboard/addbatch" mat-menu-item>
+          <mat-icon>add</mat-icon>
+          <span>Add-batch</span>
+        </button>
+      </mat-menu>
+
+      <!-- batch manu close -->
+
+      <!-- <a mat-list-item routerLink="/Dashboard/add-batch">Link 2</a> -->
+
+
+      <button routerLink="/Deshboard/add-student" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Add student</span>
+      </button>
+
+      <button routerLink="/Deshboard/pay-fee" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Pay fee</span>
+      </button>
+
+      <button routerLink="/Deshboard/add-faculty" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Add Teacher</span>
+      </button>
+
+      <button routerLink="/Deshboard/faculty" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Student List</span>
+      </button>
+
+      <button routerLink="/Deshboard/pay-salary" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Payment</span>
+      </button> <hr>
+
+
+      <button routerLink="/Deshboard/payment-history/student" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Student payment history</span>
+      </button>
+
+      <!-- <button routerLink="/Deshboard/payment-history/faculty" mat-menu-item>
+        <mat-icon>person_add</mat-icon>
+        <span>Teacher payment history</span>
+      </button> -->
+
+      <hr>
+
+      <a mat-list-item routerLink="/login">Login</a>
+
+      <a mat-list-item routerLink="/login">Sign-up</a>
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+      </button>
+      <span>Own Learning platform</span>
+    </mat-toolbar>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

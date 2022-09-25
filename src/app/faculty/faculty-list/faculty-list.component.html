@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="faculty-list-box">
+        <h3 style="padding: 10px; text-align: center;
+         background-color: blueviolet; color: white;"> Faculty List</h3>
+
+        <mat-accordion *ngFor="let faculty of faculty">
+    
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span style="font-weight: bold; margin-right: 5px;">{{faculty.name}}</span>
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{faculty.subject}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Gender : {{faculty.gender}}</p>
+              <p>Gender : {{faculty.dob}}</p>
+              <p>Address : {{faculty.address}}</p>
+              <p>Qualification : {{faculty.qualification}}</p>
+              <p>phone : {{faculty.phone}}</p>
+              <p>Salary : {{faculty.salary}}</p>
+              <p>Join Date : {{faculty.joinDate}}</p> <hr>
+              <button class="btn btn-primary">edit</button>
+              <button class="btn btn-danger ">Delete</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+    </div>
+    
+    
+</div>
+  

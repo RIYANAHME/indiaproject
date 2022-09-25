@@ -1,0 +1,15 @@
+.wrapper 
+{
+    padding: 15px;
+}
+
+.student-detail
+{
+     background-color: white;
+     border-bottom: 5px solid black;
+}
+
+table
+{
+    width: 100%;
+} 

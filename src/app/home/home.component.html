@@ -1,0 +1,57 @@
+<div class="wrapper">
+    <div> 
+        <mat-grid-list cols="3" rowHeight="2:1" gutterSize="20px">
+            <mat-grid-tile id="first">
+                <h3>120</h3>
+                <p>students</p>
+            </mat-grid-tile>
+
+            <mat-grid-tile id="second">
+                <h3>120</h3>
+                <p>Batch</p>
+            </mat-grid-tile>
+
+            <mat-grid-tile id="third">
+                <h3>120</h3>
+                <p>Faculty</p>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <table class="table">
+                    <tr class="table-heading">
+                        <th>Name</th>
+                        <th>Batch</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr *ngFor="let student of studentList">
+                    <td style="text-transform: capitalize;">{{student.name}}</td>
+                    <td>{{student.batch}}</td>
+                    <td>{{student.phone}}</td>
+                </tr>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <canvas id="piChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class=" pay-info">
+       <div class="row">
+        <div class="col-sm-4">
+            <p>Total fee : 2000</p>
+        </div>
+        <div class="col-sm-4">
+            <p>Paid to teacher : 2000</p>
+        </div>
+        <div class="col-sm-4"> 
+            <p> Saving: 6000</p>
+        </div>
+       </div>
+    </div>
+</div> 

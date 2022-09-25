@@ -1,0 +1,49 @@
+
+.wrapper{
+    padding: 15px;
+}
+mat-grid-tile
+{
+    background-color: rgb(236, 160, 160);
+}
+mat-grid-tile:hover{
+     background-color: hotpink;
+     color: white !important;
+     transition: 0.4s;
+     cursor: pointer;
+}
+
+p 
+{
+    text-align: center;
+} 
+
+.mob-view
+{
+    display: none; 
+}
+.box
+{
+     width: 100%;
+     padding: 20px;
+     background-color: rgb(114, 114, 211);
+     margin-bottom: 10px;
+}
+.box:hover
+{
+    background-color: aqua;
+    transition: 0.4s;
+}
+
+@media  (max-width:700px) {
+    .mob-view
+    {
+        display: block;
+    }
+    .desk-view
+    {
+        display: none;
+    }
+}
+    
+
